@@ -15,5 +15,27 @@ Funcionalidade: Compra de Passagem
         E clico no botao "Purchase Flight"
         Entao verifico se a url contem "confirmation"
         E se exibe a mensagem de agradecimento "Thank you for your purchase today!"
-        E se contem a informacao "Amount" como "555 USD"
-        
+        E se contem a informacao "Amount" como "555 USD" 
+
+    Cenario: Compra com Sucesso DDT
+        Dado que estou no site Blazedemo
+        Quando seleciono a origem como "<origem>"
+        E seleciono o Destino como "<destino>"
+        E clico no botao "Find Flights"
+        Entao verifico o texto Flights from "<origem>" to "<destino>"
+        E se a url contem "reserve"
+        Quando seleciono o voo "<voo>" da companhia "<companhia>"
+        Entao verifico se a url contem "purchase"
+        Quando preencho o nome como "<nome>"
+        E seleciono a bandeira do cartão como "<bandeira>"
+        E marco a opcao "Remember me"
+        E clico no botao "Purchase Flight"
+        Entao verifico se a url contem "confirmation"
+        E se exibe a mensagem de agradecimento "Thank you for your purchase today!"
+        E se contem a informacao "Amount" como "<preco>"
+
+    Exemplos: 
+        | origem    | destino  | voo  | companhia      | nome          | bandeira         | preco     |
+        | São Paolo | London   | 9696 | Aer Lingus     | Charlie Brown | Visa             | 555 USD   |
+        | Portland  | Dublin   | 12   | Virgin America | Harry Potter  | American Express | 555 USD   |
+        | Boston    | New York | 4346 | Lufthansa      | Jonh Smith    | Dinner's Club    | 555 USD   |
