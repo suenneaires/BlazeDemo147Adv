@@ -1,11 +1,15 @@
 import { Given, When, Then, And } from '@cucumber/cucumber'
+import HomePage from '../pages/home.page';
 
 
 
 
-Given('que estou no site Blazedemo', function () {
+Given('que estou no site Blazedemo', function ( {page} ) {
+    abrir_site
+
 
 });
+
 
 
 When('seleciono a origem como {string}', function (string) {
