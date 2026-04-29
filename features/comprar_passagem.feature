@@ -4,7 +4,7 @@ Funcionalidade: Compra de Passagem
         Dado que estou no site Blazedemo
         Quando seleciono a origem como "São Paolo"
         E seleciono o Destino como "London"
-        E clico no botao "Find Flights"
+        E clico no botao
         Entao verifico o texto "Flights from São Paolo to London:"
         E se a url contem "reserve"
         Quando seleciono o voo "9696" da companhia "Aer Lingus"

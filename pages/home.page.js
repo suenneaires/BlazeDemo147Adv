@@ -17,9 +17,14 @@ export default class HomePage {
     async selecionar_destino(cidade_destino) {
         await this.page.locator(this.destino).selectOption(cidade_destino)      
     }
-
+    // Este seria para o exemplo sem parametro 
     async clicar_find_flights(){
         await this.page.locator(this.btnFindFlights).click()
+    }
+
+    // Este seria para o exemplo com parametro (texto no botão)
+    async clicar_find_flights(texto_botao){
+        await this.page.getByRole('button', { name: texto_botao}).click()
     }
 
     // Jeito "Rebelde" - verificação dentro do mapeamento
@@ -31,8 +36,7 @@ export default class HomePage {
 
         if(!titulo_pagina.includes('Welcome to the Simple Travel Agency!')){
             throw new Error('Título na Home ausente ou diferente do esperado')
-        }
-            
+        }            
 
     }
 
