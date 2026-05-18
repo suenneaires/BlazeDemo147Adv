@@ -3,7 +3,7 @@ Funcionalidade: Compra de Passagem
     Cenario: Compra com Sucesso
         Dado que estou no site Blazedemo
         Quando seleciono a origem como "São Paolo"
-        E seleciono o Destino como "London"
+        E seleciono o destino como "London"
         E clico no botao
         Entao verifico o texto "Flights from São Paolo to London:"
         E verifico se a url contem "reserve"
@@ -20,7 +20,7 @@ Funcionalidade: Compra de Passagem
     Esquema do Cenario: Compra com Sucesso DDT
         Dado que estou no site Blazedemo
         Quando seleciono a origem como "<origem>"
-        E seleciono o Destino como "<destino>"
+        E seleciono o destino como "<destino>"
         E clico no botao "Find Flights"
         Entao verifico o texto Flights from "<origem>" to "<destino>"
         E verifico se a url contem "reserve"

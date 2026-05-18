@@ -42,3 +42,13 @@ Nomenclatura
 
    Em um projeto simples, cada teste é um arquivo .spec.js diferente
    Em um projeto com Gherkin, cada teste é composto por um arquivo .feature + um arquivo steps.js
+
+   Dependencias removidas:
+   "@types/node": "^25.5.2",
+    "playwright-bdd": "^8.5.0"
+
+
+    Diferenças de sintaxe conforme o type definido no package.json
+
+    commonjs --> const ... = require('...')
+    module   --> import ... from ...
