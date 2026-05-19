@@ -52,3 +52,18 @@ Nomenclatura
 
     commonjs --> const ... = require('...')
     module   --> import ... from ...
+
+
+Sobre execução sincrona (uma parte espera a outra / Ex. do telefone) e
+ assincrona (a parte emissora não espera / Ex. da mensagem do WhatsApp)
+
+ Sem async/await: transação sincrona
+ Com async/await: transação assincrona
+
+ Estamos usando 2 Frameworks:
+ - Playwright (controla o browser) --> timeout (mensagem específica que pode explicar a causa)
+ - CucumberJS (organização)        --> timeout (mensagem genérica que não vai explicar a causa)
+
+ Situação da aula: funcionava sem o await e não funcionava com o await
+
+

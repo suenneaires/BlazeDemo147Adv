@@ -7,7 +7,7 @@ class HomePage {                   // padrao para type = commonjs
         this.origem = '[name="fromPort"]'
         this.destino = '[name="toPort"]'  // xpath
         this.btnFindFlights = '.btn-primary'
-        this.url = 'https://blazedemo.com'
+        this.url = 'https://www.blazedemo.com'
     }
 
     // Mapear as ações

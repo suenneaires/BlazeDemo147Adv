@@ -1,4 +1,5 @@
-const { Before, After } = require('@cucumber/cucumber')
+const { Before, After, setDefaultTimeout } = require('@cucumber/cucumber')
+setDefaultTimeout(30000)  // define o tempo limite de um comando em CucumberJS
 
 /*
 Existem momentos dentro da execução de um script de teste

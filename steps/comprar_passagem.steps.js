@@ -39,7 +39,7 @@ Then('verifico o texto {string}', async function (mensagem_origem_destino) {
 
 Then('verifico se a url contem {string}', async function (pagina) {
     // const nome_pagina = "/" + pagina + "\.php/" -Jeito antigo de se fazer se o debaixo não funcionasse
-    expect(this.page).toHaveURL(`/${pagina}\.php/`)
+    await expect(this.page).toHaveURL(`/${pagina}\.php`)
 });
 
 
@@ -66,18 +66,18 @@ When('marco a opcao {string}', async function (string) {
 });
 
 
-When('clico no botao {string}', async function (string) {
+// When('clico no botao {string}', async function (string) {
     // Não estamos usando o parametro que é recebido neste bloco
-    await this.purchasePage.comprar_passagem()
-});
+   // await this.purchasePage.comprar_passagem()
+// });
 
 
 Then('se exibe a mensagem de agradecimento {string}', async function (string) {
-    await expect(page.locator(this.this.confirmationPage.mensagem)).toHaveText('Thank you for your purchase today!')
+    await expect(this.page.locator(this.confirmationPage.mensagem)).toHaveText('Thank you for your purchase today!')
 });
 
 
-Then('se contém a informacao {string} como {string}', async function (quantia, preco) {
+Then('se contem a informacao {string} como {string}', async function (quantia, preco) {
     // Encontra a linha em que está escrita a quantia / "Amount"
     const linha_preco = await this.page.locator('tr').filter({ has: this.page.locator('td', { hasText: quantia })})
     // na linha selecionada, verifica se contém o valor/preco
@@ -86,6 +86,6 @@ Then('se contém a informacao {string} como {string}', async function (quantia, 
 
 // Esquema de Cenário - Verifica a mensagem contendo as duas cidades que recebe como parametro
 Then('verifico o texto Flights from {string} to {string}', async function (origem, destino) {
-    await expect(page.locator(this.reservePage.titulo)).toHaveText(`Flights from ${origem} to ${destino}:`)
+    await expect(this.page.locator(this.reservePage.titulo)).toHaveText(`Flights from ${origem} to ${destino}:`)
 });
 
