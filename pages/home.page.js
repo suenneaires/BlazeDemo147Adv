@@ -18,14 +18,9 @@ class HomePage {                   // padrao para type = commonjs
     async selecionar_destino(cidade_destino) {
         await this.page.locator(this.destino).selectOption(cidade_destino)      
     }
-    // Este seria para o exemplo sem parametro 
+    // Este seria para o exemplo sem parametro --> usado na HomePage / no cenário simples
     async clicar_find_flights(){
         await this.page.locator(this.btnFindFlights).click()
-    }
-
-    // Este seria para o exemplo com parametro (texto no botão)
-    async clicar_find_flights(texto_botao){
-        await this.page.getByRole('button', { name: texto_botao}).click()
     }
 
     // Jeito "Rebelde" - verificação dentro do mapeamento

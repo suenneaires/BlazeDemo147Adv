@@ -22,7 +22,7 @@ When('seleciono o destino como {string}', async function (destino) {
 
 // Versão que clico no botão a partir do texto escrito no botão
 When('clico no botao {string}', async function (texto_botao) {
-    await this.homePage.clicar_find_flights(texto_botao)
+    await this.clicar_botao(texto_botao)
 });
 
 // Exemplo conforme o cenário simples (sem o texto "Find Flights")

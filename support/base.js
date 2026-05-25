@@ -25,6 +25,13 @@ class Base {
         if (this.context) await this.context.close()
         if (this.browser) await this.browser.close()
     }
+
+    // Este seria para o exemplo com parametro (texto no botão)
+    // Usado na Purchase (cenário simples) e na Home e na Purchase (cenário DDT)
+    async clicar_botao(texto_botao){
+        await this.page.getByRole('button', { name: texto_botao}).click()
+    }
+
 }
 
 setWorldConstructor(Base)
